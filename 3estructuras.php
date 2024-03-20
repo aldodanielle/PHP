@@ -36,9 +36,60 @@ echo $dicccionario["Nombre"];
 // esta caracteristicas nos dice que no se pueden repetir valores
 $nueva_lista = ["uno", "dos", "tres"];
 array_push($nueva_lista, "cinco");
+array_push($nueva_lista, 'cinco');
 
-echo($nueva_lista);
+print_r($nueva_lista);
+// imprime toda la lista sin importa si se repite o no
 
 
+print_r(array_unique($nueva_lista));    
+// imprime la lista pero con e valor de SET 
+// es decir no entria por que imprimit 2 veces el cinco
+// ni no solamente una vez
+
+
+// FLUJOS
+// para recorrer la una lista 
+
+for($valorN = 0; $valorN <= 10; $valorN++){
+    echo $valorN . "\n";
+}
+
+
+$carneCerdo = 'Cerdo';
+$carneRes = 'Res';
+$carnePollo = 'Pollo';
+$carneConejo = 'Conejo';
+
+$listaCarnes = [$carneCerdo, $carneRes, $carnePollo, $carneConejo];
+
+// print_r( $listaCarnes );
+
+// para acceder a cada uno de los elementos
+// no deja de ser un bucle for
+foreach($listaCarnes as $tipoCarne){
+    echo $tipoCarne . "\n";
+}
+
+
+$contador = 2;
+while($contador != 6){
+    print_r($contador . "\n");
+    $contador++;
+}
+
+
+$orden = true;
+$ordenEcha = "Su orden esta en camino"; 
+$ordarAqui = "¿Que desea ordenar?";
+
+echo $orden ? $ordenEcha : $ordarAqui;
+
+
+if ($orden == true){
+    echo $ordenEcha;
+}else{
+    echo $ordarAqui;
+}
 
 ?>
