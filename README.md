@@ -1,3 +1,2 @@
- .[!NOTE].
-
- Mi ruta de Aprendizaje ne PHP
+> .[!NOTE].
+> Mi ruta de Aprendizaje ne PHP
