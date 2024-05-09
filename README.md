@@ -7,6 +7,5 @@
 > .[!IMPORTANT].
 > Nota importante
 
- :warning:
 > .[!WARNING].
 > Advertencia 
