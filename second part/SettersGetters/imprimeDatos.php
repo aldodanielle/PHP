@@ -12,10 +12,10 @@ $empleado -> setNombre("Danielle");
 $empleado -> setSueldo(55);
 
 // Usamos el metodo Get para obtener el nombre
-echo "Nombre: " . $empleado->getNombre() . "\n";
+echo "Nombre: " . $empleado->getNombre() . "\n";    // Nombre: Danielle
 
 // Usamos el metodo Get para obtener el nombre
-echo "Saldo: " . $empleado->getSueldo() . " \n";
+echo "Saldo: " . $empleado->getSueldo() . " \n";    // Saldo: 55 
 
 
 ?>
