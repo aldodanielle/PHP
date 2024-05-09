@@ -1,4 +1,6 @@
 <?php
+// simbolo => para asignarle valores para un array
+
 $salto = "\n";
 $varArray = array (
     "name" => "Daniel",
