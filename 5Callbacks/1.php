@@ -40,11 +40,13 @@ class A{
 }
 class B extends A{
     public static function llama(){
+        parent::llama();
         echo "Me llama a mi B";
     }
 }
 
 call_user_func(array('B', 'parent::llama'));    // Me llama a mi A
+call_user_func_array('B', 'parent::llama');
 
 
 
