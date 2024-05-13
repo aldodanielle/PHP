@@ -1,0 +1,33 @@
+<html>
+    <h1>Mixen</h1>
+    <p>
+        El tipo mixto acepta cualquier valor. Es equivalente al tipo de union 
+                    object|resource|array|string|float|int|bool|null
+        Disponible apartir de la verion 8.0.o
+        mixed es, en lenguaje de teoría de tipos, el tipo superior. 
+        Significa que cualquier otro tipo es un subtipo de él
+    </p>
+
+    <h1>Void</h1>
+    <p>
+        Es una declaracion de tipo de solo retorno que indica que la funcion no devuelve un valor,
+        pero la funcion puede termianar.
+        Por lo tanto no puede ser parte de una de claracion de tipo union.
+        Disponible apartir de PHP 7.1.0
+    </p>
+
+    <h1>Relative class types</h1>
+    <h2>Tipos de clases relativos</h2>
+    <p>
+        self (automatico)
+            - El valor debe ser una instancia de la misma clase en la que se utiliza la declaración de tipo.
+
+        parent (padre)
+            - El valor debe ser una instancia de un padre de la clase en la que se utiliza la declaración 
+                de tipo.
+
+        static (statico)
+            -static es un tipo de sólo retorno que requiere que el valor devuelto sea una instancia de la 
+                misma clase en la que se llama al método. Disponible a partir de PHP 8.0.0.
+    </p>
+</html>
