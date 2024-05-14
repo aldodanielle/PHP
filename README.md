@@ -1,4 +1,6 @@
-Mi ruta de Aprendizaje ne PHP
+# PHP
+## Ruta de aprendizaje
+Mi ruta de Aprendizaje en PHP, en base a la [documentacion ofical] (https://www.php.net/manual/en/) de PHP en su sitio 
 
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
