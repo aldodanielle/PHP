@@ -48,4 +48,37 @@ echo "\$newVar==$newVar; tipo :" . gettype($newVar) . "<br> \n"; // $newVar==5; 
 echo gettype($newVar . "\n");
 echo $newVar;
 
+
+
+
+// forzado de tipos
+// esto sucede cuando en el tipo deseado se describe entre parentesis 
+// antes de la variable que se desea forzar
+
+$foo = 10;              // foo es un integer
+$bar = (boolean) $foo;  // $bar es un boolean
+
+echo gettype($foo);     // integer
+echo $foo;              // 10
+echo gettype($bar);     // boolean
+echo $bar;              // 1
+
+$foo = (int) $bar;
+$foo = ( int ) $bar;    // no importanta los espacios
+
+echo "\n";
+echo gettype($foo);     // integer
+
+
+// forzado de tipos que estan permitidos
+$queSoy = 2;
+$cadena = (string) $queSoy;
+echo gettype($cadena);      // string
+// (int), (integer) - forzado a integer
+// (bool), (boolean) - forzado a boolean
+// (float), (double), (real) - forzado a float
+// (string) - forzado a string
+// (array) - forzado a array
+// (object) - forzado a object
+// (unset) - forzado a NULL (PHP 5)
 ?>
