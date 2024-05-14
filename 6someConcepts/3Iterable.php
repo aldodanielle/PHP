@@ -1,4 +1,4 @@
-git pull<?php
+<?php
 // Es un seudotipo introducico en PHP 7.1
 // Acepta cualquier array u objecto que acepte la interfaz Traversable 
 // interface Traversable {
