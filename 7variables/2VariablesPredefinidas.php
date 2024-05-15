@@ -1,0 +1,5 @@
+<?php
+// PHP proporciona una gran cantidad de variables predefinidas a cualquier script que se ejecute. Muchas de éstas, sin embargo, no pueden ser completamente documentadas ya que dependen del servidor que esté corriendo, la versión y configuración de dicho servidor, y otros factores. Algunas de estas variables no estarán disponibles cuando se ejecute PHP desde la línea de comandos. Para obtener una lista de estas variables, por favor vea la sección sobre Variables Predefinidas Reservadas.
+
+// PHP ofrece un conjunto adicional de arrays predefinidas que contienen variables del servidor web, el entorno y entradas del usuario. Estos nuevos arrays son un poco especiales porque son automáticamente globales. Por esta razón, son conocidas a menudo como "superglobales". Las superglobales se mencionan más abajo; sin embargo para una lista de sus contenidos y más información sobre variables predefinidas en PHP, por favor consulte la sección Variables predefinidas reservadas. Asimismo, podrá notar cómo las antiguas variables predefinidas ($HTTP_*_VARS) todavía existen.
+?>
