@@ -47,10 +47,10 @@ namespace MiEspacioDeNombres {
 }
 // En este ejemplo:
 
-// __FUNCTION__ devuelve el nombre de la función en la que se usa. En este caso, imprimirá “miMetodo”.
-// __CLASS__ devuelve el nombre de la clase en la que se usa. En este caso, imprimirá “MiClase”.
-// __METHOD__ devuelve el nombre del método de la clase en la que se usa. En este caso, imprimirá “MiClase::miMetodo”.
-// __NAMESPACE__ devuelve el nombre del espacio de nombres en el que se usa. En este caso, imprimirá “MiEspacioDeNombres”.
-// __TRAIT__ devuelve el nombre del trait en el que se usa. En este caso, imprimirá “MiEspacioDeNombres\MiTrait”.
+// __FUNCTION__ devuelve el nombre de la función en la que se usa. “miMetodo”.
+// __CLASS__ devuelve el nombre de la clase en la que se usa. imprimirá.“MiClase”.
+// __METHOD__ devuelve el nombre del método de la clase en la que se usa.“MiClase::miMetodo”.
+// __NAMESPACE__ devuelve el nombre del espacio de nombres en el que se usa.“MiEspacioDeNombres”.
+// __TRAIT__ devuelve el nombre del trait en el que se usa.“MiEspacioDeNombres\MiTrait”.
 
 ?>
