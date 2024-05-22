@@ -38,4 +38,18 @@ if($a ?? $b ?? $c){
 }else{
     echo "NO";
 }
+
+
+
+
+
+// ---+++++    Ejemplos    ---+++++
+var_dump(0 == "a");         // 0 == 0 -> bool(false) solo este salio incorrecto a la documentacion
+var_dump("1" == "01");      // 1 == 1 -> bool(true)
+var_dump("10" == "1e1");    // 10 == 10 -> bool(true)
+var_dump(100 == "1e2");     // 100 == 100 -> bool(true)
+
+var_dump("a" === "a");      // true porque es estrictamente igual
+
+
 ?>
