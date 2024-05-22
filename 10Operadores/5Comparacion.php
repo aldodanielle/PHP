@@ -52,4 +52,14 @@ var_dump(100 == "1e2");     // 100 == 100 -> bool(true)
 var_dump("a" === "a");      // true porque es estrictamente igual
 
 
+switch ("a"){
+    case 0:
+        echo "Caso 0";
+        break;
+    case "a":
+        echo "Caso a";
+        break;
+    default:
+        echo "default";
+}
 ?>
