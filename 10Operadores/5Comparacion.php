@@ -62,4 +62,51 @@ switch ("a"){
     default:
         echo "default";
 }
+
+
+// Integers
+// solo para resultados de -1, 0 ,1 asi que     4 <=> 1 da como resultado 1
+echo 1 <=> 1;   // 0
+echo 1 <=> 2;   // -1
+echo 4 <=> 1;   // 1
+
+// floats
+echo 1.5 <=> 1.5;   // 0
+echo 1.5 <=> 2.5;   // -1
+echo 3.5 <=> 1.5;   // 1
+
+// strings
+echo "a" <=> "a";   // 0
+echo "a" <=> "b";   // -1
+echo "b" <=> "a";   // 1
+
+echo "aldo" <=> "aldo"; // 0
+echo "aldo" <=> "dani"; // -1
+echo "dani" <=> "aldo"; // 1
+
+// array
+echo [] <=> [];                 // 0
+echo [1, 2, 3] <=> [];          // 1
+echo [1, 2, 3] <=> [1, 2, 1];   // 1
+echo [1, 2, 3] <=> [1, 2, 4];   // -1
+
+// object
+$a = (object) ["a" => "b"];
+$b = (object) ["a" => "b"];
+echo $a <=> $b;     // 0
+
+$a = (object) ["a" => "b"];
+$b = (object) ["a" => "c"];
+echo $a <=> $b;     // -1
+
+$a = (object) ["a" => "c"];
+$b = (object) ["a" => "d"];
+echo $a <=> $b;     // -1
+
+
+//only value are compared}
+$a = (object) ["a" => "b"];
+$b = (object) ["b" => "b"];
+echo $a <=> $b;     // 1
+
 ?>
