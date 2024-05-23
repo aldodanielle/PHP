@@ -161,4 +161,14 @@ if (empty($_POST['action'])){
 }else{
     echo $action = $_POST['action'];
 }
+
+
+
+
+//          ---+++++     Comportamiento ternario poco obvio     +++++---
+// las operacions ternarias se elimina de izquierda a derecha
+echo (true ? 'true' : false ? 't' : 'f');   // error de compilacion (no soportado)
+
+// una mejor correcion del ejemplo anterior
+echo ((true ? 'true' : false)? 't' : 'f');  // salida 't'
 ?>
