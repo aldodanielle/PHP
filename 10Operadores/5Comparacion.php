@@ -185,4 +185,15 @@ if(isset($_POST['action'])){                // default
 }else{
     echo $action = 'default';
 }
+
+
+
+
+//          ---+++++     Nesting null coalescing operator     +++++---
+$goo = null;
+$mor = null;
+$bob = 1;
+$pat = 2;
+
+echo $goo ?? $mor ?? $bob ?? $pat;      // outputs -> 1
 ?>
