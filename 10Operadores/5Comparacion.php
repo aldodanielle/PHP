@@ -171,4 +171,18 @@ echo (true ? 'true' : false ? 't' : 'f');   // error de compilacion (no soportad
 
 // una mejor correcion del ejemplo anterior
 echo ((true ? 'true' : false)? 't' : 'f');  // salida 't'
+
+
+
+
+//          ---+++++     Assigning a default value     +++++---
+// Example usage for: NULL coalsce Operator
+echo $action = $_POST['action'] ?? 'default';   // default
+
+// the above is identical to this if/else  statement
+if(isset($_POST['action'])){                // default
+    echo $action = $_POST['$action'];
+}else{
+    echo $action = 'default';
+}
 ?>
