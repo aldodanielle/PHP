@@ -150,4 +150,15 @@ function standard_array_compare($op1, $op2){
 
 
 
+//          ---+++++     Aignacion de valor predeterminado     +++++---
+
+// Ej de uso con operador ternario
+echo $action = (empty($_POST['action'])) ? 'default' : $_POST['action'];
+
+// con sentencia IF
+if (empty($_POST['action'])){
+    echo $action = 'default';
+}else{
+    echo $action = $_POST['action'];
+}
 ?>
