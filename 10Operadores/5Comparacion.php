@@ -122,4 +122,32 @@ var_dump(100 < true);       // FALSE - same a (bool)100 < TRUE
 var_dump(-10 < false);      // FALSE - same a (bool)-10 < FALSE
 
 var_dump(min(-100, -10, NULL, 10, 100));    // NULL
+
+
+
+
+//          ---+++++     Comparacion estandar con array     +++++---
+// los Array son comprados de esta forma con los operadores de compracion estandar 
+
+function standard_array_compare($op1, $op2){
+    if (count($op1) < count($op2)) {
+        return -1; // $op1 < $op2
+    } elseif (count($op1) > count($op2)) {
+        return 1; // $op1 > $op2
+    }
+    foreach ($op1 as $key => $val) {
+        if (!array_key_exists($key, $op2)) {
+            return null; // uncomparable
+        } elseif ($val < $op2[$key]) {
+            return -1;
+        } elseif ($val > $op2[$key]) {
+            return 1;
+        }
+    }
+    return 0; // $op1 == $op2
+}
+
+
+
+
 ?>
