@@ -64,7 +64,8 @@ switch ("a"){
 }
 
 
-// Integers
+//          ---+++++     Integers     +++++---
+
 // solo para resultados de -1, 0 ,1 asi que     4 <=> 1 da como resultado 1
 echo 1 <=> 1;   // 0
 echo 1 <=> 2;   // -1
@@ -109,4 +110,16 @@ $a = (object) ["a" => "b"];
 $b = (object) ["b" => "b"];
 echo $a <=> $b;     // 1
 
+
+
+
+//          ---+++++     boolean/null     +++++---
+
+// boolean y null son comprados simpre como bool
+var_dump(1 == true);        // TRUE - same a (bool)1 == TRUE
+var_dump(0 == false);       // TRUE - same a (bool)0 == FALSE
+var_dump(100 < true);       // FALSE - same a (bool)100 < TRUE
+var_dump(-10 < false);      // FALSE - same a (bool)-10 < FALSE
+
+var_dump(min(-100, -10, NULL, 10, 100));    // NULL
 ?>
