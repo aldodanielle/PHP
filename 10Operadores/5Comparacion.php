@@ -150,4 +150,50 @@ function standard_array_compare($op1, $op2){
 
 
 
+//          ---+++++     Aignacion de valor predeterminado     +++++---
+
+// Ej de uso con operador ternario
+echo $action = (empty($_POST['action'])) ? 'default' : $_POST['action'];
+
+// con sentencia IF
+if (empty($_POST['action'])){
+    echo $action = 'default';
+}else{
+    echo $action = $_POST['action'];
+}
+
+
+
+
+//          ---+++++     Comportamiento ternario poco obvio     +++++---
+// las operacions ternarias se elimina de izquierda a derecha
+echo (true ? 'true' : false ? 't' : 'f');   // error de compilacion (no soportado)
+
+// una mejor correcion del ejemplo anterior
+echo ((true ? 'true' : false)? 't' : 'f');  // salida 't'
+
+
+
+
+//          ---+++++     Assigning a default value     +++++---
+// Example usage for: NULL coalsce Operator
+echo $action = $_POST['action'] ?? 'default';   // default
+
+// the above is identical to this if/else  statement
+if(isset($_POST['action'])){                // default
+    echo $action = $_POST['$action'];
+}else{
+    echo $action = 'default';
+}
+
+
+
+
+//          ---+++++     Nesting null coalescing operator     +++++---
+$goo = null;
+$mor = null;
+$bob = 1;
+$pat = 2;
+
+echo $goo ?? $mor ?? $bob ?? $pat;      // outputs -> 1
 ?>
