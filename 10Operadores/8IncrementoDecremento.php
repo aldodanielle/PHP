@@ -40,5 +40,25 @@ echo "Debe ser 4: " . $d . "<br /> \n";
 
 
 
+//          ---+++++     Sobre variables de caracteres     +++++---
+echo '==LETRAS==' . PHP_EOL;
+// imprime la secuenaci es decir X, Y, Z, AA, AB, AC... y lo mismo con las palabras solo cambia la ultima letra eje hola, holb, holc, hold,...
+$s = 'W';
+for ($n = 0; $n < 6; $n++){
+    echo ++$s . PHP_EOL;
+}
 
+// comportamiento diferente con digito 
+echo '==Digitos==' . PHP_EOL;
+// solo admite un digito numerico por consecuencia al llegar a A9 pasara a B0 y lo mismo hasta llegar a B9, C0
+$d = 'A8';
+for($n = 0; $n < 6; $n++){
+    echo ++$d . PHP_EOL;
+}
+
+// admite 2 digitos numericos por lo que imprimira A09, A10, A11...
+$d = 'A08';
+for($n = 0; $n < 6; $n++){
+    echo ++$d . PHP_EOL;
+}
 ?>
