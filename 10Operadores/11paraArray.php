@@ -31,4 +31,13 @@ $a += $b;   // Unión de $a += $b es $a y $b
 echo "Union de \$a += \$b: \n";
 var_dump($a);
 
+
+
+//          ---+++++     Coparando Array     +++++---
+
+$a = array("apple", "banana");
+$b = array(1 => "banana", 0 => "apple");
+
+var_dump($a == $b);     // true  -> los valores son iguales 
+var_dump($a === $b);    // false -> los valores son iguales pero extrictamente el tipo de dato 
 ?>
