@@ -37,4 +37,31 @@ if ($w > $x && $w > $y && $w >$z){
 }else{
     echo "todos son iguales";
 }
+
+
+
+
+//          ---+++++     uso sin los {}     +++++---
+
+// ---------- Metodo incorrecto
+$x = 10;
+$y = 8;
+if($x > $y):
+    echo "$x es mayor que $y";
+else if($a == $b):      // se cambia "else if" por "elseif" para que no marque error
+    echo "Error la linea anterior comete un error";
+endif;
+
+
+// ---------- Metodo correcto
+$a = 10;
+$b = 8;
+
+if ($a > $b):
+    echo "$a es mayor que $b";
+elseif ($a == $b): // Tenga en cuenta la combinación de las palabras.
+    echo "$a es igual a $b";
+else:
+    echo "$a no es ni mayor ni igual a $b";
+endif;
 ?>
