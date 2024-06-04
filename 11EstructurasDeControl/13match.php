@@ -104,6 +104,7 @@ var_dump($result);  // string(11) "young adult"
 // Ejemplo #6 Uso de expresiones match generalizadas para ramificar el contenido de strings.
 $text = 'Bienvenue chez nous';
 $result = match (true) {
+    // str_contains -> no determina si una cadena contiene subcadena dterminana 
     str_contains($text, 'Welcome') || str_contains($text, 'Hello') => 'en',
     str_contains($text, 'Bienvenue') || str_contains($text, 'Bonjour') => 'fr',
     str_contains($text, 'Benvenido') || str_contains($text, 'Hola') => 'es',
