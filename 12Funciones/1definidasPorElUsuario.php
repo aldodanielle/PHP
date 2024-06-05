@@ -3,7 +3,7 @@
 
 // son bloques de codigo reutilizables que realizan una tarea especifica 
 // sintaxis 
-function _nombre_fuction($arg1, $arg2, /* ... ,*/ $argN )
+function _nombre_fuction($arg1, $arg2, /* ... ,*/ $argN, $valor_devuelto )
 {
     echo "Funcion de ejemplo";
     return $valor_devuelto;
