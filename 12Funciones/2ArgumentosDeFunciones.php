@@ -59,13 +59,63 @@ function hacer_yogurt2($sabor, $tipo = 'acidofilo')
 echo hacer_yogurt2("Fresa");    // Hacer una taza de yogut acidofilo de Fresa
 
 
-// EJ 7 ->
 
+//          ---+++++     Declaraciones de Tipo     +++++---
+// EJ 7 -> Declaracion basica de tipo clase
+Class C{}
+class D extends C{}
+
+//No extiende a C
+class E{}   
+function f(C $c){
+    echo get_class($c) . "\n";
+}
+f(new C);   // C
+f(new D);   // D
+f(new E);   // Fatal error: Uncaught...
+
+
+// EJ 8 -> Declaracion basica de tipo interfaz 
+interface I { public function f(); }
+class C implements I { public function f() {}}
+
+// Esta NO implementa I
+class E{}
+
+function f ( I $i ){
+    echo get_class($i) . "\n";
+}
+
+f(new C);   // C
+f(new E);   // fatal error: 
+
+
+// EJ 9 -> Tipos de paramentros pasador por defecto 
+function array_baz(array &$param)
+{
+    $param = 1;
+}
+$var = [];
+array_baz($var);
+var_dump($var);
+array_baz($var);
+// int (1)
+// Fatal error: ...
+
+
+// EJ 10 -> Declaracion de tipo nulo 
+class C{}
+function f(C $c = null){
+    var_dump($c);
+}
+f(new C);       // object(C)#1 (0){}
+f(null);        // NULL
+
+
+
+// EJ 11 -> 
 // EJ 1 -> 
 // EJ 1 -> 
-// EJ 1 -> 
-// EJ 1 -> 
-// EJ 1 -> 
-// EJ 1 -> 
+
 
 ?>
