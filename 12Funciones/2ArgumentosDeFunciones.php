@@ -113,7 +113,49 @@ f(null);        // NULL
 
 
 
-// EJ 11 -> 
+//          ---+++++     Tipificacion estricta     +++++---
+// modo estricto -> en funciones de cada fichero
+// la foma de declararlo es --->    declare con la declaracion  strict_types 
+
+
+// EJ 11 -> Tipificacion estricta 
+declare(strict_types = 1);      // fuerza el chequeo estricto de tipos en las declaracion de funciones
+// en este caso la funcion espera un entero y forzosamente tiene que es un entero
+function sum(int $a, int $b){
+    return $a + $b;
+}
+var_dump(sum(2, 3));    // int (5)
+var_dump(sum(1.4, 2.6));// error no  por que espera un entero y no es un entero
+
+
+
+// EJ 12 -> Tipificacion debil
+function suma(int $a, int $b){
+    return $a + $b;
+}
+var_dump(suma(2, 3));       // inte(5)
+// en esta son oblicado a hacerce enteros y es como si se sumara 1 + 2 = 3
+var_dump(suma(1.4, 2.6));   // int(3)
+
+
+// EJ 13 -> se captura la exepcion (TypeError)
+declare (strict_types = 1);
+function sum2(int $a, int $b){
+    return $a + $b;
+}
+
+try{
+    var_dump(sum2(2, 3));       // int (5)
+    var_dump(sum2(1.4, 2.6));   // se lanza el error a capturar 
+}catch(TypeError $e){
+    echo 'Error: ' . $e -> getMessage(); // captura el Error: sum2(): Argument #1 ($a) must be of type, float given, called in C:\URL\del\script\ on line 
+}
+
+
+
+
+// EJ 1 -> 
+// EJ 1 -> 
 // EJ 1 -> 
 // EJ 1 -> 
 
