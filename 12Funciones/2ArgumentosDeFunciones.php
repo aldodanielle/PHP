@@ -190,7 +190,11 @@ echo total_inteval('d', $a, $b) . ' days ';   // 3 days
 
 // esto fallara, debido a que null no esun objeto de DateInterval
 echo total_inteval('d', null);  // error
-// EJ 1 ->
 
+
+
+//          ---+++++     versiones antiguas      +++++---
+// versiones que fueron hasta la version php 5
+// son absoletas NO hay necesidad de observarlas 
 
 ?>
