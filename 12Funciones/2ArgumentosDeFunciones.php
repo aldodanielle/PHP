@@ -153,11 +153,44 @@ try{
 
 
 
+//          ---+++++     Listas de argumentos de logitud variable     +++++---
+// EJ 14 -> Usando ... para acceder a argumentos variables 
+function sum3(...$numeros){
+    $acc = 0;
+    foreach ($numeros as $n){
+        $acc += $n;
+    }
+    return $acc;
+}
+echo sum3(1, 2, 3, 4);  // 10
 
-// EJ 1 -> 
-// EJ 1 -> 
-// EJ 1 -> 
-// EJ 1 -> 
+
+
+// EJ 15 -> Usar ... para proporcionar argumentos
+function add ($a, $b){
+    return $a + $b;
+}
+
+echo add(...[1, 2]);    // 3
+$a = [2, 3];
+echo add(...$a);    // 5
+
+
+// EJ 1 -> Argumentos variables de declaración de tipo
+function total_inteval($unit, DateInterval ...$intevals){
+    $time = 0;
+    foreach($intevals as $inteval){
+        $time += $inteval->$unit;
+    }
+    return $time;
+}
+$a = new DateInterval('P1D');
+$b = new DateInterval('P2D');
+echo total_inteval('d', $a, $b) . ' days ';   // 3 days
+
+// esto fallara, debido a que null no esun objeto de DateInterval
+echo total_inteval('d', null);  // error
+// EJ 1 ->
 
 
 ?>
