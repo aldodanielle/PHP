@@ -78,4 +78,36 @@ switch($i){
     echo "El valor por efecto de i es $i";
     break;
 }
+
+
+// sintaxis alternativa -> se cambian las {} -> :
+$i = 'z';
+switch($i):
+    case 'a':
+        echo "El valor de i es $i";
+        break;
+    case 'b':
+        echo "El valor de i es $i";
+        break;
+    case 'c':
+        echo "El valor de i es $i";
+        break;
+    default:
+        echo "El valor por defecto de i es $i";
+        break;
+endswitch;
+
+
+// exepciones de cambio de uso de : por ;
+switch ($beer = 'heineken'){
+    case 'indio';
+    case 'victoria';
+    case 'carta blanca';
+    case 'corona';
+        echo 'Hiciste una nueva eleccion';
+        break;
+    default:
+        echo 'Por favor eleccione akguna de nuestras opciones...';
+        break;
+}
 ?>
