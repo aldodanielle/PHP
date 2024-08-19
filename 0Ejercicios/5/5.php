@@ -25,7 +25,7 @@ function palabrasMasLarga($cadena) {
 }
 
 
-$frase = 'there is nothing in this world that can hurt you';
+$frase = 'there is nothing in this world that can hurt you.';
 echo $frase;
 echo '<br>';
 echo 'la palabras mas larga es: ' . palabrasMasLarga($frase);
